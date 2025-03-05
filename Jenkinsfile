@@ -36,7 +36,7 @@ pipeline {
             steps {
                 echo 'Copying application to destination...'
                 sh '''
-                sudo cp -r ${SOURCE_DIR}/content/. ${DESTINATION_DIR}
+                sudo cp -r ${SOURCE_DIR}/. ${DESTINATION_DIR}
                 sudo chown -R debian:debian ${DESTINATION_DIR}
                 '''
             }
