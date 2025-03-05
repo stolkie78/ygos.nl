@@ -3,10 +3,9 @@ pipeline {
 
     environment {
         SITE = "ygos.nl"
-        HTML = "/home/debian/webserver/ngnix/html/${SITE}"
         GITHUB_REPO = "stolkie78/${SITE}"
-        SOURCE_DIR = "${HTML}"
-        DESTINATION_DIR = "/home/debian/tmp/${HTML}"
+        SOURCE_DIR = "./content"
+        DESTINATION_DIR = "/home/debian/webserver/nginx/html/${SITE}"
     }
 
     triggers {
